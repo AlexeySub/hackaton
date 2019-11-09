@@ -1,1 +1,1 @@
-web: gunicorn geotestback.wsgi --log-file -
+web: gunicorn hackaton.wsgi --log-file -
