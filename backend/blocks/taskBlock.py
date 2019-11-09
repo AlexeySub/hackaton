@@ -19,9 +19,6 @@ def createTask(data):
 
 def getTasks(data):
     tasks = Tasks.objects.all()
-    for i in tasks:
-        if i.deadline < datetime.now():
-            Tasks.objects.filter(id=i['id']).update(status=True)
     return HttpResponse(renderers.JSONRenderer().render(tasks.values()))
 
 
